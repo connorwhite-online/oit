@@ -1,0 +1,46 @@
+@font-face {
+    font-family: 'Acma-Medium';
+    src: url('../../fonts/PPAcma-Medium.woff') format('woff'),
+        url('../../fonts/PPAcma-Medium.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'Neue-Machina-Bold';
+    src: url('../../fonts/PPNeueMachina-InktrapUltrabold.woff') format('woff'),
+        url('../../fonts/PPNeueMachina-InktrapUltrabold.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'Neue-Machina';
+    src: url('../../fonts/PPNeueMachina-InktrapRegular.woff') format('woff'),
+        url('../../fonts/PPNeueMachina-InktrapRegular.woff2') format('woff2');
+}
+
+.landing {
+    position: absolute;
+    width: 95dvw;
+    height: 95vh;
+    padding: 2.5vh 2.5dvw;
+    z-index: 5;
+}
+
+.titleContainer {
+    clip-path: inset(0);
+    justify-content: center;
+}
+
+.title {
+    
+    font-family: 'Neue-Machina-Bold', sans-serif;
+    color: white;
+    font-size: 15vw;
+    padding: 0;
+    margin: 0;
+    text-align: justify;
+}
+
+@media screen and (min-width: 768px) {
+    .title {
+        font-size: 8.6vw;
+    }
+}

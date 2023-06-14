@@ -1,0 +1,29 @@
+.menu {
+    position: absolute;
+    width: 90vw;
+    height: auto;
+    bottom: 0dvh;
+    margin: 5dvh 5dvw;
+    display: flex;
+    justify-content: space-between;
+    z-index: 10;
+}
+
+a.navLink {
+    text-decoration: none;
+    cursor: pointer;
+    color: white;
+    font-family: 'Open Sans', sans-serif;
+}
+
+@media screen and (min-width: 768px) {
+    .menu {
+        width: 95vw;
+        height: auto;
+        bottom: 0dvh;
+        margin: 5dvh 2.5dvw;
+        display: flex;
+        justify-content: space-between;
+        z-index: 10;
+    }
+}
