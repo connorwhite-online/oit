@@ -7,11 +7,10 @@ export default function Menu() {
 
     useEffect(() => {
         let ctx = gsap.context(() => {
-            gsap.from('.navLink', {
-                duration: 1,
-                // opacity: 0,
-                x: 100,
-                stagger: 0.2,
+            gsap.from('.navBox', {
+                duration: 2,
+                opacity: 0,
+                y: 100,
                 ease: 'power3.out'
             })
         }, menu.current)
