@@ -17,8 +17,9 @@ export default function Landing(){
             gsap.from('.titleContainer', {
                 duration: 2,
                 clipPath: 'inset(100% 0 0 0)',
-                ease: 'power3.out',
+                ease: 'power4.inOut',
                 // stagger: 0.1,
+                delay: 6.5,
             })
         }, landing.current)
         return () => ctx.revert();

@@ -22,7 +22,7 @@ export default function Scene() {
 function Plane() {
     return (
         <mesh>
-            <planeBufferGeometry attach='geometry' args={[12, 10]} />
+            <planeBufferGeometry attach='geometry' args={[6, 3]} />
             {/* <meshBasicMaterial attach='material' color='red'/> */}
             <colorShiftMaterial color="hotpink" time={1} attach='material'/>
         </mesh>
@@ -41,11 +41,11 @@ const ColorShiftMaterial = shaderMaterial(
     `,
     // fragment shader
     /*glsl*/`
-      uniform float time;
-      uniform vec3 color;
+      uniform float uTime;
+      uniform vec3 uColor;
       varying vec2 vUv;
       void main() {
-        gl_FragColor.rgba = vec4(0.5 + 0.3 * sin(vUv.yxx + time) + color, 1.0);
+        gl_FragColor.rgba = vec4(0.5 + 0.3 * sin(vUv.yxx + uTime) + uColor, 1.0);
       }
     `
   )

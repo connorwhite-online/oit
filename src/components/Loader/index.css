@@ -1,0 +1,33 @@
+@font-face {
+    font-family: 'Neue-Machina-Bold';
+    src: url('../../fonts/PPNeueMachina-InktrapUltrabold.woff') format('woff'),
+        url('../../fonts/PPNeueMachina-InktrapUltrabold.woff2') format('woff2');
+}
+
+.loader {
+    /* visibility: hidden; */
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    z-index: 100;
+    background-color: #BAC2BA;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    clip-path: inset(0 0 0 0);
+}
+
+.typeBox {
+    clip-path: inset(0 0 0 0);
+}
+
+.logoType {
+    font-family: 'Neue-Machina-Bold', sans-serif;
+    color: black;
+    font-size: 3vw;
+}
+
+.line {
+    border-top: 2px solid black;
+    clip-path: inset(0 0 0 0);
+}

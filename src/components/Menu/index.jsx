@@ -11,7 +11,8 @@ export default function Menu() {
                 duration: 2,
                 opacity: 0,
                 y: 100,
-                ease: 'power3.out'
+                ease: 'power3.inOut',
+                delay: 6.5,
             })
         }, menu.current)
         return () => ctx.revert();
