@@ -16,7 +16,7 @@ export default function Landing(){
         let ctx = gsap.context(() => {
             gsap.from('.titleContainer', {
                 duration: 2,
-                clipPath: 'inset(100% 0 0 0)',
+                clipPath: 'inset(100% 0 100% 0)',
                 ease: 'power4.inOut',
                 // stagger: 0.1,
                 delay: 6.5,
