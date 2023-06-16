@@ -22,9 +22,9 @@ export default function Scene() {
 function Plane() {
     return (
         <mesh>
-            <planeBufferGeometry attach='geometry' args={[6, 3]} />
+            <planeBufferGeometry attach='geometry' args={[16, 9]} />
             {/* <meshBasicMaterial attach='material' color='red'/> */}
-            <colorShiftMaterial color="hotpink" time={1} attach='material'/>
+            <colorShiftMaterial color="hotpink" uTime={1} attach='material'/>
         </mesh>
     )
 }
