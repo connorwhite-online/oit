@@ -1,12 +1,13 @@
-import React, { useRef } from 'react';
+import React, { useRef, useState } from 'react';
 import { Canvas, extend, useFrame } from '@react-three/fiber';
 import { shaderMaterial } from '@react-three/drei';
 import * as THREE from 'three';
 import './index.css';
 
 export default function Scene() {
+
     return (
-        <div style={{width: window.innerWidth, height: window.innerHeight, zIndex: 1, position: 'absolute'}}>
+        <div style={{width: window.innerWidth, height: window.innerHeight, zIndex: 1, position: 'absolute'}} >
             <Canvas>
                 <Plane />
                 {/* <mesh>
@@ -20,17 +21,26 @@ export default function Scene() {
 }
 
 function Plane() {
+
+    const materialRef = useRef();
+
+    useFrame((state, delta) => {
+      materialRef.current.uniforms.uTime.value += delta;
+    });
+
     return (
         <mesh>
             <planeBufferGeometry attach='geometry' args={[16, 9]} />
             {/* <meshBasicMaterial attach='material' color='red'/> */}
-            <colorShiftMaterial color="hotpink" uTime={1} attach='material'/>
+            <colorShiftMaterial ref={materialRef} attach='material'/>
         </mesh>
     )
 }
 
 const ColorShiftMaterial = shaderMaterial(
-    { time: 0, color: new THREE.Color(0.4, 0.0, 0.1) },
+    { 
+      uTime: 0,
+    },
     // vertex shader
     /*glsl*/`
       varying vec2 vUv;
@@ -42,10 +52,10 @@ const ColorShiftMaterial = shaderMaterial(
     // fragment shader
     /*glsl*/`
       uniform float uTime;
-      uniform vec3 uColor;
       varying vec2 vUv;
+        
       void main() {
-        gl_FragColor.rgba = vec4(0.5 + 0.3 * sin(vUv.yxx + uTime) + uColor, 1.0);
+        gl_FragColor = vec4(0, 0, 0, 1.0);
       }
     `
   )
