@@ -51,12 +51,31 @@ const ColorShiftMaterial = shaderMaterial(
     `,
     // fragment shader
     /*glsl*/`
-      uniform float uTime;
-      varying vec2 vUv;
-        
-      void main() {
-        gl_FragColor = vec4(0, 0, 0, 1.0);
-      }
+
+    uniform float uTime;
+    varying vec2 vUv;
+
+    float rand(float n) {
+      return fract(sin(n) * 43758.5453123);
+    }
+
+    void main() {
+      float t = uTime * 0.2;
+      float x = vUv.x - 0.5;
+      float y = vUv.y - 0.5;
+      float angle = atan(y, x) + t;
+      float radius = sqrt(x * x + y * y);
+      float distortion = sin(radius * 10.0 - t) * 0.52;
+      float offset = sin(angle * 20.0 + t) * distortion;
+
+      vec4 color = vec4(0.0);
+      color.r = rand(radius + offset + t);
+      color.g = rand(radius + offset + t + 1.0);
+      color.b = rand(radius + offset + t + 2.0);
+      color.a = 0.8;
+
+      gl_FragColor = color;
+    }
     `
   )
   
