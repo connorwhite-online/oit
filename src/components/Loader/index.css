@@ -24,10 +24,16 @@
 .logoType {
     font-family: 'Neue-Machina-Bold', sans-serif;
     color: white;
-    font-size: 3vw;
+    font-size: 6vw;
 }
 
 .line {
     border-top: 2px solid white;
     clip-path: inset(0 0 0 0);
+}
+
+@media screen and (min-width: 768px) {
+    .logoType {
+        font-size: 3vw;
+    }
 }
