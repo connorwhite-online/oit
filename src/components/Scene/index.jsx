@@ -59,7 +59,7 @@ float noise(vec2 p) {
 }
 
 void main() {
-  float t = uTime * 0.25;  // Adjust the speed of the transformations
+  float t = uTime * 0.15;  // Adjust the speed of the transformations
   float x = vUv.x - 0.5;
   float y = vUv.y - 0.5;
 
