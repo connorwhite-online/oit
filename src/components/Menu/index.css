@@ -3,10 +3,10 @@
     width: 90vw;
     height: auto;
     bottom: 0dvh;
-    margin: 5dvh 5dvw;
+    margin: 5dvw 5dvw;
     display: flex;
     justify-content: space-between;
-    z-index: 10;
+    z-index: 99;
     clip-path: inset(0);
 }
 
@@ -22,7 +22,7 @@ a.navLink {
         width: 95vw;
         height: auto;
         bottom: 0dvh;
-        margin: 5dvh 2.5dvw;
+        margin: 2.5dvw 2.5dvw;
         display: flex;
         justify-content: space-between;
         z-index: 10;
