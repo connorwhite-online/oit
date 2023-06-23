@@ -7,13 +7,9 @@ import './index.css';
 export default function Scene() {
 
     return (
-        <div style={{width: window.innerWidth, height: window.innerHeight, zIndex: 1, position: 'absolute'}} >
+        <div style={{width: window.innerWidth, height: window.innerHeight, zIndex: 9, position: 'absolute', pointerEvents: 'none'}} >
             <Canvas>
                 <Plane />
-                {/* <mesh>
-                    <planeBufferGeometry attach='geometry' args={[12, 10]} />
-                    <meshStandardMaterial attach='material' color='hotpink' />
-                </mesh> */}
                 <ambientLight intensity={0.5} />
             </Canvas>
         </div>
@@ -31,7 +27,6 @@ function Plane() {
     return (
         <mesh>
             <planeBufferGeometry attach='geometry' args={[16, 9]} />
-            {/* <meshBasicMaterial attach='material' color='red'/> */}
             <colorShiftMaterial ref={materialRef} attach='material'/>
         </mesh>
     )
@@ -53,29 +48,48 @@ const ColorShiftMaterial = shaderMaterial(
     /*glsl*/`
 
     uniform float uTime;
-    varying vec2 vUv;
+varying vec2 vUv;
 
-    float rand(float n) {
-      return fract(sin(n) * 43758.5453123);
-    }
+float rand(float n) {
+  return fract(sin(n) * 43758.5453123);
+}
 
-    void main() {
-      float t = uTime * 0.2;
-      float x = vUv.x - 0.5;
-      float y = vUv.y - 0.5;
-      float angle = atan(y, x) + t;
-      float radius = sqrt(x * x + y * y);
-      float distortion = sin(radius * 10.0 - t) * 0.52;
-      float offset = sin(angle * 20.0 + t) * distortion;
+float noise(vec2 p) {
+  return rand(p.x + p.y * 10.0);
+}
 
-      vec4 color = vec4(0.0);
-      color.r = rand(radius + offset + t);
-      color.g = rand(radius + offset + t + 1.0);
-      color.b = rand(radius + offset + t + 2.0);
-      color.a = 0.8;
+void main() {
+  float t = uTime * 0.25;  // Adjust the speed of the transformations
+  float x = vUv.x - 0.5;
+  float y = vUv.y - 0.5;
 
-      gl_FragColor = color;
-    }
+  // Calculate the angle based on the pixel's position
+  float angle = atan(y, x) * -1.0;
+
+  // Calculate the radius based on the distance from the center of the shader
+  float radius = sqrt(x * x + y * y);
+
+  // Apply fluid-like transformations based on the angle
+  float distortion = sin(radius * 10.0 - t + angle) * 0.1;
+  vec2 offset = vec2(cos(angle), sin(angle)) * distortion;
+
+  // Apply random mutations to the UV coordinates
+  float mutationX = noise(vUv * 2.0 + t) * 0.1;
+  float mutationY = noise(vUv * 2.0 - t) * 0.1;
+  vec2 mutatedUV = vec2(vUv.x + mutationX, vUv.y + mutationY);
+
+  // Apply refraction to the UV coordinates
+  vec2 refractedUV = mutatedUV + offset * 0.1;
+
+  // Create the transparency gradient based on the transformed UV coordinates
+  float fade = smoothstep(0.0, 1.0, t);  // Fade in from 0 to 1 over time
+  float transparency = smoothstep(0.0, 0.12, length(offset)) * fade;  // Apply fade to the transparency
+
+  // Apply the transparency to the color
+  vec4 color = vec4(0, 0, 0, transparency);
+
+  gl_FragColor = color;
+}
     `
   )
   
