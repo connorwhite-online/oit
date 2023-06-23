@@ -23,6 +23,16 @@
         padding: 0 10dvw;
     }
     .copy p {
-        font-size: 1.75vw;
+        font-size: 1.5vw;
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    .about {
+        width: 60dvw;
+        padding: 0 20dvw;
+    }
+    .copy p {
+        font-size: 1.25vw;
     }
 }
