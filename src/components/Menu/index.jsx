@@ -30,7 +30,7 @@ export default function Menu() {
                 opacity: 0,
                 y: 100,
                 ease: 'power3.inOut',
-                delay: 6.5,
+                delay: 7,
             })
         }, menu.current)
         return () => ctx.revert();
