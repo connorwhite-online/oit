@@ -10,8 +10,8 @@
     height: 100vh;
     position: absolute;
     z-index: 100;
-    /* background-color: rgba(255, 255, 255, .5); */
-    background-image: linear-gradient(rgba(255, 255, 255, .75), rgba(186, 195, 186, .75));
+    background-color: rgb(142, 142, 142);
+    /* background-image: linear-gradient(rgba(142, 142, 142, 1), rgba(142, 142, 142, .5)); */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -24,12 +24,12 @@
 
 .logoType {
     font-family: 'Neue-Machina-Bold', sans-serif;
-    color: white;
+    color: black;
     font-size: 6vw;
 }
 
 .line {
-    border-top: 2px solid white;
+    border-top: 2px solid black;
     clip-path: inset(0 0 0 0);
 }
 
