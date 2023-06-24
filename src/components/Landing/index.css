@@ -18,9 +18,9 @@
 
 .landing {
     position: absolute;
-    width: 95dvw;
-    height: 95vh;
-    padding: 2.5vh 2.5dvw;
+    width: 90dvw;
+    height: auto;
+    padding: 5dvw;
     z-index: 5;
 }
 
@@ -40,6 +40,10 @@
 }
 
 @media screen and (min-width: 768px) {
+    .landing {
+        height: auto;
+        padding: 2.5dvw;
+    }
     .title {
         font-size: 8.6vw;
     }
