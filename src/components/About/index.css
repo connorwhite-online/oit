@@ -20,19 +20,28 @@
 @media screen and (min-width: 768px) {
     .about {
         width: 80dvw;
-        padding: 0 10dvw;
+        height: 75dvh;
+        padding: 12.5dvh 10dvw;
+        align-items: flex-end;
     }
     .copy p {
         font-size: 1.5vw;
     }
 }
 
-@media screen and (min-width: 1000px) {
-    .about {
-        width: 60dvw;
-        padding: 0 20dvw;
-    }
+@media screen and (min-width: 900px) {
     .copy p {
         font-size: 1.25vw;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .about {
+        width: 60dvw;
+        height: 80dvh;
+        padding: 10dvh 20dvw;
+    }
+    .copy p {
+        font-size: 1vw;
     }
 }
