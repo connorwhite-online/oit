@@ -3,11 +3,6 @@
     src: url('../../fonts/anzeigen_grotesk_d_regular-webfont.woff') format('woff'),
         url('../../fonts/anzeigen_grotesk_d_regular-webfont.woff2') format('woff2');
 }
-@font-face {
-    font-family: 'Neue-Machina';
-    src: url('../../fonts/PPNeueMachina-InktrapRegular.woff') format('woff'),
-        url('../../fonts/PPNeueMachina-InktrapRegular.woff2') format('woff2');
-}
 
 .landing {
     position: absolute;
