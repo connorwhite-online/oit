@@ -1,7 +1,7 @@
 @font-face {
-    font-family: 'Neue-Machina-Bold';
-    src: url('../../fonts/PPNeueMachina-InktrapUltrabold.woff') format('woff'),
-        url('../../fonts/PPNeueMachina-InktrapUltrabold.woff2') format('woff2');
+    font-family: 'Anzeigen-Grotesk';
+    src: url('../../fonts/anzeigen_grotesk_d_regular-webfont.woff') format('woff'),
+        url('../../fonts/anzeigen_grotesk_d_regular-webfont.woff2') format('woff2');
 }
 
 .loader {
@@ -10,7 +10,7 @@
     height: 100vh;
     position: absolute;
     z-index: 100;
-    background-color: rgb(142, 142, 142);
+    background-color: #c2c2c3;
     /* background-image: linear-gradient(rgba(142, 142, 142, 1), rgba(142, 142, 142, .5)); */
     display: flex;
     justify-content: center;
@@ -23,9 +23,9 @@
 }
 
 .logoType {
-    font-family: 'Neue-Machina-Bold', sans-serif;
+    font-family: 'Anzeigen-Grotesk', sans-serif;
     color: black;
-    font-size: 6vw;
+    font-size: 10vw;
 }
 
 .line {
@@ -35,6 +35,6 @@
 
 @media screen and (min-width: 768px) {
     .logoType {
-        font-size: 3vw;
+        font-size: 5vw;
     }
 }
