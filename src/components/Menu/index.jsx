@@ -37,8 +37,8 @@ export default function Menu() {
     }, [])
     return (
         <div ref={menu} className='menu'>
-            <div className='navBox' onMouseEnter={hoverIn} onMouseLeave={hoverOut}><a href='https://indd.adobe.com/embed/29ff1f14-a1ee-48dc-a6c2-e70bb720387a?startpage=1&allowFullscreen=true' target="_blank" rel="noopener noreferrer" className='navLink'>Our Work</a></div>
-            <div className='navBox' onMouseEnter={hoverIn} onMouseLeave={hoverOut}><a href='mailto:get@byseanbrown.com' className='navLink'>Contact</a></div>
+            <div className='navBox' onMouseEnter={hoverIn} onMouseLeave={hoverOut}><a href='https://indd.adobe.com/embed/29ff1f14-a1ee-48dc-a6c2-e70bb720387a?startpage=1&allowFullscreen=true' target="_blank" rel="noopener noreferrer" className='navLink'>OUR WORK</a></div>
+            <div className='navBox' onMouseEnter={hoverIn} onMouseLeave={hoverOut}><a href='mailto:get@byseanbrown.com' className='navLink'>CONTACT</a></div>
         </div>
     )
 }
