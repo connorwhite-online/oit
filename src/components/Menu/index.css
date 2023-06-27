@@ -1,6 +1,6 @@
 .menu {
     position: absolute;
-    width: 90vw;
+    width: 90dvw;
     height: auto;
     bottom: 0dvh;
     margin: 5dvw;
@@ -20,7 +20,7 @@ a.navLink {
 
 @media screen and (min-width: 768px) {
     .menu {
-        width: 95vw;
+        width: 95dvw;
         height: auto;
         bottom: 0dvh;
         margin: 2.5dvw;
