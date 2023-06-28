@@ -13,15 +13,15 @@
 .copy p {
     font-family: 'Open Sans', sans-serif;
     font-size: 3.5vw;
-    text-align: justify;
+    /* text-align: justify; */
     clip-path: inset(0 0 0 0);
 }
 
 @media screen and (min-width: 768px) {
     .about {
-        width: 80dvw;
+        width: 60dvw;
         height: 75dvh;
-        padding: 12.5dvh 10dvw;
+        padding: 12.5dvh 1.5dvw;
         align-items: flex-end;
     }
     .copy p {
@@ -39,7 +39,7 @@
     .about {
         width: 60dvw;
         height: 80dvh;
-        padding: 10dvh 20dvw;
+        padding: 10dvh 1.5dvw;
     }
     .copy p {
         font-size: 1vw;

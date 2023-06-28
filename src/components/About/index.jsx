@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 import './index.css';
 import {TextPlugin} from 'gsap/TextPlugin';
@@ -11,7 +11,7 @@ export default function About() {
     useEffect(() => {
         let ctx = gsap.context(() => {
             gsap.from('.pg', {
-                delay: 8,
+                delay: 9,
                 duration: 2,
                 opacity: 0,
                 clipPath: 'inset(0 100% 0 0)',

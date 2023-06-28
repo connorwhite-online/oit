@@ -15,8 +15,10 @@ export default function Landing(){
         // Landing Copy Animation
         let ctx = gsap.context(() => {
             gsap.from('.titleContainer', {
-                duration: 3,
-                clipPath: 'inset(100% 0 100% 0)',
+                duration: 4,
+                clipPath: 'inset(100% 0 0 0)',
+                // scaleY: 0,
+                // opacity: 0,
                 ease: 'power4.inOut',
                 // stagger: 0.1,
                 delay: 6.5,

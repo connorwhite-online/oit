@@ -6,9 +6,9 @@
 
 .landing {
     position: absolute;
-    width: 90dvw;
+    width: 98dvw;
     height: auto;
-    padding: 0 5dvw;
+    padding: 0 1dvw;
     z-index: 5;
 }
 
@@ -22,10 +22,10 @@
     font-family: 'Anzeigen-Grotesk', sans-serif;
     /* font-family: 'Neue-Machina', sans-serif; */
     color: white;
-    font-size: 17vw;
+    font-size: 18.4vw;
     letter-spacing: -.5vw;
     transform: scale(1, 2);
-    padding: 10dvw 0;
+    padding: 5dvw 0;
     margin: 0;
     /* text-align: justify; */
     margin-block-start: 0em;
@@ -34,14 +34,14 @@
 
 @media screen and (min-width: 768px) {
     .landing {
-        width:  95dvw;
+        width:  98dvw;
         height: auto;
-        padding: 0 2.5dvw;
+        padding: 1dvw 1dvw;
     }
     .title {
-        font-size: 18vw;
+        font-size: 18.4vw;
         transform: scale(1, 2);
-        padding: 6vw 0;
+        padding: 6vh 0;
         
         /* font-weight: 200; */
         /* font-size: 8.6vw; */

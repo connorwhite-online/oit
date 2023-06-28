@@ -53,7 +53,7 @@ export default function Loader() {
 
     return(
         <div ref={loader} className='loader'>
-            <div className='typeBox'><div className='logoType'>OUR INITIAL THOUGHTS</div><div className='line'></div></div>
+            <div className='typeBox'><div className='logoType'>INITIAL THOUGHTS</div><div className='line'></div></div>
         </div>
     )
 }

@@ -1,9 +1,9 @@
 .menu {
     position: absolute;
-    width: 90dvw;
+    width: 97dvw;
     height: auto;
     bottom: 0dvh;
-    margin: 5dvw;
+    margin: 1.5dvw 1.5dvw;
     display: flex;
     justify-content: space-between;
     z-index: 99;
@@ -20,10 +20,10 @@ a.navLink {
 
 @media screen and (min-width: 768px) {
     .menu {
-        width: 95dvw;
+        width: 97dvw;
         height: auto;
         bottom: 0dvh;
-        margin: 2.5dvw;
+        margin: 1.5dvw 1.5dvw;
         display: flex;
         justify-content: space-between;
         z-index: 10;

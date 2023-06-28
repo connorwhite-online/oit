@@ -26,6 +26,9 @@
     font-family: 'Anzeigen-Grotesk', sans-serif;
     color: black;
     font-size: 10vw;
+    letter-spacing: -.1vw;
+    transform: scale(1, 2);
+    padding: 2.5dvh 0;
 }
 
 .line {
