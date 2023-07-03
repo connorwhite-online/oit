@@ -20,15 +20,16 @@
 
 .typeBox {
     clip-path: inset(0 0 0 0);
+    width: 80%;
 }
 
 .logoType {
-    font-family: 'Anzeigen-Grotesk', sans-serif;
+    /* font-family: 'Anzeigen-Grotesk', sans-serif; */
+    font-family: 'Open-Sans', sans-serif;
     color: black;
-    font-size: 10vw;
-    letter-spacing: -.1vw;
-    transform: scale(1, 2);
+    font-size: 3.5vw;
     padding: 2.5dvh 0;
+    text-align: justify;
 }
 
 .line {
@@ -37,7 +38,11 @@
 }
 
 @media screen and (min-width: 768px) {
+    .typeBox {
+        width: 50%;
+    }
     .logoType {
-        font-size: 5vw;
+        font-size: 1.5vw;
+        text-align: center;
     }
 }

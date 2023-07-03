@@ -31,7 +31,7 @@ export default function Menu() {
                 y: 100,
                 ease: 'power3.inOut',
                 stagger: 0.5,
-                delay: 8,
+                delay: 10,
             })
         }, menu.current)
         return () => ctx.revert();
