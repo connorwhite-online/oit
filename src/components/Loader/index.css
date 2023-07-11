@@ -27,9 +27,9 @@
     /* font-family: 'Anzeigen-Grotesk', sans-serif; */
     font-family: 'Open-Sans', sans-serif;
     color: black;
-    font-size: 4vw;
+    font-size: 5vw;
     padding: 2.5dvh 0;
-    text-align: justify;
+    text-align: center;
 }
 
 .line {
